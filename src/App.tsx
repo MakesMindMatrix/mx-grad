@@ -1,21 +1,37 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Navbar from "./components/Navbar";
 import GetStarted from "./pages/GetStarted";
 import Login from "./pages/Login";
 
-
 function App() {
-  const isAuthenticated = false; // later connect auth
-
   return (
     <Router>
-      {!isAuthenticated && <Navbar />}
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+
+        {/* Public Marketing Pages (WITH NAVBAR) */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
+        />
+
+        <Route
+          path="/about"
+          element={
+            <>
+              <Navbar />
+              <About />
+            </>
+          }
+        />
+
+        {/* Auth Pages (NO NAVBAR) */}
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/login" element={<Login />} />
 
