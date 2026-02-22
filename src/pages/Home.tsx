@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Solutions from "../components/Solutions";
 import HowItWorks from "../components/HowItWorks";
@@ -8,8 +7,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div className="bg-slate-950 text-white">
-      <Navbar />
+    <div className="pt-20 bg-slate-950 text-white">
       <Hero />
       <Stats />
       <Solutions />

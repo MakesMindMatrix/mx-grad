@@ -9,7 +9,7 @@ const CTA = () => {
           Join MX GRAD as a student, industry partner, or institution.
         </p>
   
-        <button className="mt-8 px-8 py-3 bg-black text-white rounded-xl font-semibold">
+        <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl shadow-md hover:scale-105 transition duration-300"          >
           Get Started
         </button>
       </section>

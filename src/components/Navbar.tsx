@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/mx-logo.png";
 
+
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between px-8 py-5 bg-slate-900 border-b border-slate-800">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm px-8 py-4 flex items-center justify-between">
       
       {/* Clickable Logo */}
       <Link to="/">
@@ -19,12 +20,17 @@ const Navbar = () => {
       </div>
 
       <div className="flex gap-4">
-        <button className="px-4 py-2 text-sm border border-slate-700 rounded-lg">
-          Login
-        </button>
-        <button className="px-4 py-2 text-sm bg-cyan-500 rounded-lg text-black font-semibold">
-          Get Started
-        </button>
+      <Link to="/login">
+            <button className="px-4 py-2 border rounded-lg">
+              Login
+            </button>
+          </Link>
+            
+          <Link to="/get-started">
+            <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl shadow-md hover:scale-105 transition duration-300">
+              Get Started
+            </button>
+          </Link>
       </div>
     </nav>
   );
