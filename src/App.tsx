@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import GetStarted from "./pages/GetStarted";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import LoginRole from "./pages/LoginRole";
+
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
             </>
           }
         />
+        <Route path="/signup/:role" element={<Signup />} />
+        <Route path="/login/:role" element={<LoginRole />} />
+
 
         <Route
           path="/about"
