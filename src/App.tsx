@@ -6,6 +6,12 @@ import GetStarted from "./pages/GetStarted";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import LoginRole from "./pages/LoginRole";
+import IndustryLayout from "./pages/dashboard/industry/IndustryLayout";
+import IndustryDashboard from "./pages/dashboard/industry/IndustryDashboard";
+import IndustryJDBuilder from "./pages/dashboard/industry/IndustryJDBuilder";
+// import CompetencyMatrix from "./pages/dashboard/industry/CompetencyMatrix";
+
+
 
 
 function App() {
@@ -25,6 +31,18 @@ function App() {
         />
         <Route path="/signup/:role" element={<Signup />} />
         <Route path="/login/:role" element={<LoginRole />} />
+        {/* <Route path="/dashboard/industry" element={<IndustryDashboard />} /> */}
+        
+<Route path="/dashboard/industry" element={<IndustryLayout />}>
+
+  <Route index element={<IndustryDashboard />} />
+
+  <Route path="jd-builder" element={<IndustryJDBuilder />} />
+
+  {/* <Route path="competency-matrix" element={<CompetencyMatrix />} /> */}
+
+</Route>
+
 
 
         <Route
