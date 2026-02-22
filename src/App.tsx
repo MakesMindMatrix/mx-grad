@@ -10,6 +10,9 @@ import IndustryLayout from "./pages/dashboard/industry/IndustryLayout";
 import IndustryDashboard from "./pages/dashboard/industry/IndustryDashboard";
 import IndustryJDBuilder from "./pages/dashboard/industry/IndustryJDBuilder";
 // import CompetencyMatrix from "./pages/dashboard/industry/CompetencyMatrix";
+import IndustryCompetencyMatrix from "./pages/dashboard/industry/IndustryCompetencyMatrix";
+import IndustryTalentDiscovery from "./pages/dashboard/industry/IndustryTalentDiscovery.tsx";
+
 
 
 
@@ -38,6 +41,13 @@ function App() {
   <Route index element={<IndustryDashboard />} />
 
   <Route path="jd-builder" element={<IndustryJDBuilder />} />
+  <Route
+  path="competency-matrix"
+  element={<IndustryCompetencyMatrix />} />
+  <Route
+  path="talent-discovery"
+  element={<IndustryTalentDiscovery />} />
+
 
   {/* <Route path="competency-matrix" element={<CompetencyMatrix />} /> */}
 
